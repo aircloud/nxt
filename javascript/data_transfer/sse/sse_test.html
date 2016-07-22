@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h2>SSE</h2>
+SE适用于更新频繁、低延迟并且数据都是从服务端到客户端。它和WebSocket的区别：
+
+1）便利，不需要添加任何新组件，用任何习惯的后端语言和框架就能继续使用，不用为新建虚拟机弄一个新的IP或新的端口号而劳神。
+
+2）服务器端的简洁。因为SSE能在现有的HTTP/HTTPS协议上运作，所以它能够直接运行于现有的代理服务器和认证技术。
+<p id="sse"></p>
+<script>
+var source;
+
+    function sse_init(){
+        source=new EventSource("http://localhost/sse/sse_data.php");
+
+        source.onopen = function(){
+            console.log('链接已经建立',this.readyState);
+        };
+
+        source.onmessage = function(event){
+            document.getElementById('sse').innerHTML='从服务器获取数据:'+event.data+"<br/>";
+        }
+
+    }
+
+   sse_init();
+
+</script>
+
+</body>
+</html>
