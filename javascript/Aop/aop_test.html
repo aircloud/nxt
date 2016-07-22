@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>面向切面编程的综合实践</title>
+</head>
+<body>
+<p>这个小程序的情景是这样的:你需要给所有的函数增加一个计时器,来计算哪一个函数比较浪费时间,从而进行后期的性能优化。</p>
+<p>主要思想大概是这样:在原型链上面加上两个函数,一个是before一个是after,分别在函数执行前后执行,before的话是返回一个大的函数体,这个函数体是在after之后一起执行的。</p>
+
+<script>
+
+    function test(){
+//        alert(2);
+        setTimeout(document.write( "test me"),5000);
+    }
+
+    Function.prototype.before=function(fn){
+        var __self = this;//在这里的this指的是test函数
+        console.log(__self);
+
+//        console.log(this);
+        return function () {
+//            if(fn.apply(this.arguments) ==false){
+//                return false;
+//            }
+//            console.log(this);
+//            console.log(fn);//fn指的是before里面那个函数
+//            console.log(this.arguments);
+//            fn.apply(this.arguments);
+            console.log(__self);
+            fn();
+            __self.apply(__self.arguments);
+        }
+    };
+
+    Function.prototype.after = function(fn){
+        var __self = this;
+        return function(){
+            __self.apply(__self.arguments);
+            console.log(__self);
+            fn.apply(this.arguments);
+        };
+    };
+
+    test.before(function(){
+//        alert(1);
+        var begin = Date.parse(new Date());
+        console.log("begin"+begin);
+    }).after(function () {
+//        alert(3);
+        var end = Date.parse(new Date());
+        console.log('end'+end);
+       // return false;
+    })();
+
+
+
+</script>
+
+</body>
+</html>
