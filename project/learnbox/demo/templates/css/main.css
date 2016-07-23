@@ -1,0 +1,53 @@
+body,*,p,table{
+    margin: 0;
+    padding:0;
+}
+
+.error{
+    color:red !important;
+}
+
+.headerdiv{
+    background-color: #282828;
+    border-bottom: solid 2px orange;
+    border-radius: 0;
+    padding: 20px;
+    height: 90px;
+    width: 100%;
+}
+
+.login_div{
+    position: fixed;
+    right:0;
+    top:52px;
+    font-weight: 600 !important;
+}
+
+.no_a,.no_a:hover{
+    text-decoration: none !important;
+    dark(10%);
+}
+
+.login_div form{
+    background-color: rgba(0,0,0,0.7);
+}
+
+a:active{
+    text-decoration: none !important;
+}
+
+
+#yu_div{
+    margin-top:30px;
+    margin-bottom:30px;
+    border-top: 3px solid orange;
+    border-bottom: 3px solid orange;
+    background-color: white;
+    border-radius: 0;
+}
+
+@media (max-width: 768px){
+    .title_text{
+        display: none!important;
+    }
+}

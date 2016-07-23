@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>论坛-学习盒子</title>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/init.css">
+    <link rel="stylesheet" type="text/css" href="../css/buttons.css">
+    <link rel="stylesheet" type="text/css" href="../css/forum.css">
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="loginBox row">
+        <div class="col-md-1"></div>
+        <div class="col-md-1">
+            <img class="logo" src="../img/logo@x2.png">
+        </div>
+        <div class="col-md-7 searchBox">
+            <form method="post">
+                <input type="search" class="search form-control fl" name="search" placeholder="搜索 课程/软件">
+                <button type="submit" class="button button-primary button-square fl"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                <div class="cl"></div>
+            </form>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-2 userBox">
+            <img src="../img/usericon.png" class="fl">
+            <a href="#" class="loginLink" data-toggle="modal" data-target="#loginModal">登录</a> /
+            <a href="#" class="registerLink" data-toggle="modal" data-target="#registerModal">注册</a>
+
+            <!--<img src="img/usericon.png" class="fl">-->
+            <!--<a href="#" class="accountLink">我的盒子</a>-->
+            <!--<a href="#" class="loginOut">退出</a>-->
+        </div>
+    </div>
+    <!--modal box-->
+    <script src="../js/modalBox.js"></script>
+
+    <!--result box-->
+    <div class="forum">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-6">
+                <div class="download">
+                    <div class="topBox">
+                        <div class="decorateBar fl"></div>
+                        <div class="title fl">下载PHP</div>
+                        <select class="os form-control fr" name="os">
+                            <option>Windows</option>
+                            <option>Max OS</option>
+                            <option>Linux</option>
+                        </select>
+                    </div>
+                    <div class="mainBox">
+                        <img src="../img/phpSoftIcon.png" class="fl">
+                        <table class="fl">
+                            <thead>
+                                <td>版本</td>
+                                <td>大小</td>
+                            </thead>
+                            <tr>
+                                <td>{版本号}</td>
+                                <td>{硬盘大小}</td>
+                            </tr>
+                        </table>
+                        <div class="softwareInfo fl">
+                            PHP是一种新型的CGI程序编写语言，易学易用，运行速度快，
+                            可以方便快捷地编写出功能强大，运行速度快，并可同时
+                            运行于windows、Unix、Linux平台的Web后台程序。
+                        </div>
+                        <div class="cl"></div>
+                    </div>
+                    <div class="footBox">
+                        <button class="button button-primary button-rounded button-small">下载</button>
+                        <button class="button button-primary button-square button-rounded button-small">+</button>
+                        <div class="cl"></div>
+                        <a href="#" class="website fl">php.com</a>
+                        <span class="update fl">更新于2015年10月30日</span>
+                        <a href="#" class="otherVersions fr">下载其他版本</a>
+                        <div class="cl"></div>
+                    </div>
+                </div>
+                <script>
+                    setInterval(function(){
+                        var infoLeft=$(".download .softwareInfo").offset().left;
+                        var boxLeft=$(".download").offset().left;
+                        $(".download .footBox").css({
+                            'margin-left':infoLeft-boxLeft
+                        })
+                    },100)
+                </script>
+                <div class="post">
+                    <div class="topBox">
+                        <div class="decorateBar fl"></div>
+                        <span class="title fl">如何在Mac OS X上部署 PHP?</span>
+                        <span class="answer fr">169 回帖</span>
+                        <div class="cl"></div>
+                    </div>
+                    <div class="mainBox">
+                        <div class="leftBox fl">
+                            <img src="../img/obama.png" class="postImg">
+                            <div class="cl"></div>
+                            <span class="postName">Obama</span>
+                        </div>
+                        <div class="rightBox fl">
+                            <div class="postInfo">
+                                PHP是世界上主流的网页语言之一，我们在本地进行网页编程的时候，就需要
+                                配置php的本地环境，今天，小编就来教大家怎么在Mac OS X下无痛安装php环境
+                            </div>
+                            <div class="footBox">
+                                <span class="time">2015年9月12日</span>
+                            </div>
+                            <div class="cl"></div>
+                        </div>
+                        <div class="cl"></div>
+                    </div>
+                </div>
+                <div class="post">
+                    <div class="topBox">
+                        <div class="decorateBar fl"></div>
+                        <span class="title fl">部署PHP+Apache+MySQL?</span>
+                        <span class="answer fr">12 回帖</span>
+                        <div class="cl"></div>
+                    </div>
+                    <div class="mainBox">
+                        <div class="leftBox fl">
+                            <img src="../img/Venus.png" class="postImg">
+                            <div class="cl"></div>
+                            <span class="postName">Obama</span>
+                        </div>
+                        <div class="rightBox fl">
+                            <div class="postInfo">
+                                查了一些资料，再加上以前也曾配置过，整个Apache+PHP5+Mysql配置、
+                                测试成功的过程只用了短短5分钟。废话不多说，先罗列出我下载的相关程序
+                                的列表
+                            </div>
+                            <div class="footBox">
+                                <span class="time">2014年10月20日</span>
+                            </div>
+                            <div class="cl"></div>
+                        </div>
+                        <div class="cl"></div>
+                    </div>
+                </div>
+                <div class="post">
+                    <div class="topBox">
+                        <div class="decorateBar fl"></div>
+                        <span class="title fl">部署PHP+Apache+MySQL?</span>
+                        <span class="answer fr">41 回帖</span>
+                        <div class="cl"></div>
+                    </div>
+                    <div class="mainBox">
+                        <div class="leftBox fl">
+                            <img src="../img/Google.png" class="postImg">
+                            <div class="cl"></div>
+                            <span class="postName">圆圆圈圈圆圆</span>
+                        </div>
+                        <div class="rightBox fl">
+                            <div class="postInfo">
+                                小弟已经安装好了mysql和配置好了Php运行环境，在安装的时候出现了
+                                500错误，具体看图：[图][图]
+                            </div>
+                            <div class="footBox">
+                                <span class="time">2015年11月18日</span>
+                            </div>
+                            <div class="cl"></div>
+                        </div>
+                        <div class="cl"></div>
+                    </div>
+                    <div class="answerBox">
+                        <div class="mainBox">
+                            <div class="leftBox fl">
+                                <img src="../img/Bchao.png" class="postImg">
+                                <div class="cl"></div>
+                                <span class="postName">脑洞跃界</span>
+                            </div>
+                            <div class="rightBox fl">
+                                <span class="bestAnswer">最有帮助的回答:</span>
+                                <div class="postInfo">
+                                    是php和mysql连接有问题，现在可以正常使用。
+                                    附上解决的方法：首先进入php5安装目录，假设安装目录
+                                </div>
+                                <div class="footBox">
+                                    <span class="time">2015年11月21日</span>
+                                </div>
+                                <div class="cl"></div>
+                            </div>
+                            <div class="cl"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="post">
+                    <div class="topBox">
+                        <div class="decorateBar fl"></div>
+                        <span class="title fl">求解如何安装phpstorm？</span>
+                        <span class="answer fr">25 回帖</span>
+                        <div class="cl"></div>
+                    </div>
+                    <div class="mainBox">
+                        <div class="leftBox fl">
+                            <img src="../img/dog.png" class="postImg">
+                            <div class="cl"></div>
+                            <span class="postName">Dog</span>
+                        </div>
+                        <div class="rightBox fl">
+                            <div class="postInfo">
+                                如题。装了一整天都没装上，另求正版破解教程~
+                            </div>
+                            <div class="footBox">
+                                <span class="time">2015年9月18日</span>
+                            </div>
+                            <div class="cl"></div>
+                        </div>
+                        <div class="cl"></div>
+                    </div>
+                    <div class="answerBox">
+                        <div class="mainBox">
+                            <div class="leftBox fl">
+                                <img src="../img/Iverson.png" class="postImg">
+                                <div class="cl"></div>
+                                <span class="postName">The true</span>
+                            </div>
+                            <div class="rightBox fl">
+                                <span class="bestAnswer">最有帮助的回答:</span>
+                                <div class="postInfo">
+                                    经过半个多小时的安装和破解探索，已掌握正确的安装phpStorm的姿势。
+                                    具体看图：[图][图]
+                                </div>
+                                <div class="footBox">
+                                    <span class="time">2015年9月27日</span>
+                                </div>
+                                <div class="cl"></div>
+                            </div>
+                            <div class="cl"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="post">
+                    <div class="topBox">
+                        <div class="decorateBar fl"></div>
+                        <span class="title fl">Linux下如何配置FTP服务器</span>
+                        <span class="answer fr">19 回帖</span>
+                        <div class="cl"></div>
+                    </div>
+                    <div class="mainBox">
+                        <div class="leftBox fl">
+                            <img src="../img/pikaqiu.png" class="postImg">
+                            <div class="cl"></div>
+                            <span class="postName">无脸男</span>
+                        </div>
+                        <div class="rightBox fl">
+                            <div class="postInfo">
+                                以Ubuntu v17.0服务器为例，配置FTP，顺便分享一下常规的服务器配置流程。
+                                下面上图:[图][图]
+                            </div>
+                            <div class="footBox">
+                                <span class="time">2015年9月12日</span>
+                            </div>
+                            <div class="cl"></div>
+                        </div>
+                        <div class="cl"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer row">
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <ul>
+                <li><a href="#">联系我们</a></li>|
+                <li><a href="#">知识产权公告</a></li>|
+                <li>浙ICP备12345678</li>
+                <li><span class="copyright">版权归YCN小组所有</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function(){
+        var info=$(".postInfo");
+        var cutString=(function(){
+            return function() {
+                for (var i = 0; i < info.length; i++) {
+                    var string=info.eq(i).html();
+                    var maxLength=141;
+                    if(string.length>maxLength){
+                        info.eq(i).html(string.substring(0,maxLength)+"...");
+                    }
+                }
+            }
+        })();
+        cutString();
+    })
+</script>
+</body>
+</html>

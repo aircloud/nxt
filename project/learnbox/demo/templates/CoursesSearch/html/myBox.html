@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的盒子-学习盒子</title>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/init.css">
+    <link rel="stylesheet" type="text/css" href="../css/buttons.css">
+    <link rel="stylesheet" type="text/css" href="../css/myBox.css">
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/masonry.pkgd.min.js"></script>
+    <script src="../js/imagesLoaded.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="loginBox row">
+        <div class="col-md-1"></div>
+        <div class="col-md-1">
+            <img class="logo" src="../img/logo@x2.png">
+        </div>
+        <div class="col-md-7 searchBox">
+            <form method="post">
+                <input type="search" class="search form-control fl" name="search" placeholder="搜索 课程/软件">
+                <button type="submit" class="button button-primary button-square fl"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                <div class="cl"></div>
+            </form>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-2 userBox">
+            <!--<img src="templates/CoursesSearch/img/usericon.png" class="fl">-->
+            <!--<a href="#" class="loginLink" data-toggle="modal" data-target="#loginModal">登录</a> /-->
+            <!--<a href="#" class="registerLink" data-toggle="modal" data-target="#registerModal">注册</a>-->
+
+            <img src="../img/usericon.png" class="fl">
+            <a href="#" class="accountLink">我的盒子</a>
+            <a href="#" class="loginOut">退出</a>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $(".accountBox").mouseenter(function(){
+                $(".accountBox .nameBox img").attr("src","../img/editName@blue.png");
+            });
+            $(".accountBox").mouseleave(function(){
+                $(".accountBox .nameBox img").attr("src","../img/editName.png");
+            });
+        })
+    </script>
+    <div class="row masonry-container fluidBox">
+        <div class="col-md-4 col-sm-6 item">
+            <div class="accountBox thumbnail">
+                <img src="../img/mayun.png" class="fl">
+                <div class="infoBox fl">
+                    <div class="nameBox fl">
+                        <span class="name fl">Jack Ma</span>
+                        <img src="../img/editName.png" class="fl">
+                        <div class="cl"></div>
+                        <span class="email">mayun@alibaba.com</span>
+                    </div>
+                    <div class="collection fr">
+                        <span class="number">0</span>
+                        <div class="cl"></div>
+                        <span class="collect">收藏</span>
+                    </div>
+                    <div class="cl"></div>
+                    <a class="setting fl" href="#">设置</a>
+                    <a class="arrange fr" href="#">整理盒子</a>
+                    <div class="cl"></div>
+                </div>
+                <div class="cl"></div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6 item">
+            <div class="HiBox thumbnail">
+                <div class="topBox">
+                    <img src="../img/SayHi.png" class="fl">
+                    <span class="title fl">盒子</span>
+                    <div class="cl"></div>
+                </div>
+                <div class="mainBox">
+                    你的盒子空空如也，<br>
+                    这是我们为你推荐的一些内容。
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6 item">
+            <div class="courseBox thumbnail">
+                <div class="topBox">
+                    <div class="decorateBar fl"></div>
+                    <span class="title fl">PHP入门课</span>
+                    <span class="score fr">8.8/10</span>
+                    <div class="cl"></div>
+                    <div class="people fl"></div>
+                    <div class="cl"></div>
+                </div>
+                <div class="content">
+                    <!--{if }-->
+                    <div class="pageContent">
+                        课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容
+                        课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容
+                    </div>
+                </div>
+                <div class="footBox">
+                    <span class="platform">极客学院</span>
+                    <div class="cl"></div>
+                    <img src="../img/phpImg.png">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6 item">
+            <div class="courseBox thumbnail">
+                <div class="topBox">
+                    <div class="decorateBar fl"></div>
+                    <span class="title fl">PHP入门课</span>
+                    <span class="score fr">8.8/10</span>
+                    <div class="cl"></div>
+                    <div class="people fl"></div>
+                    <div class="cl"></div>
+                </div>
+                <div class="content">
+                    <!--{if }-->
+                    <div class="pageContent">
+                        课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容
+                        课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容
+                    </div>
+                </div>
+                <div class="footBox">
+                    <span class="platform">极客学院</span>
+                    <div class="cl"></div>
+                    <img src="../img/phpImg.png">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6 item">
+            <div class="courseBox thumbnail">
+                <div class="topBox">
+                    <div class="decorateBar fl"></div>
+                    <span class="title fl">PHP入门课</span>
+                    <span class="score fr">8.8/10</span>
+                    <div class="cl"></div>
+                    <div class="people fl"></div>
+                    <div class="cl"></div>
+                </div>
+                <div class="content">
+                    <!--{if }-->
+                    <div class="pageContent">
+                        课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容
+                        课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容
+                    </div>
+                </div>
+                <div class="footBox">
+                    <span class="platform">极客学院</span>
+                    <div class="cl"></div>
+                    <img src="../img/phpImg.png">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6 item">
+            <div class="courseBox thumbnail">
+                <div class="topBox">
+                    <div class="decorateBar fl"></div>
+                    <span class="title fl">PHP入门课</span>
+                    <span class="score fr">8.8/10</span>
+                    <div class="cl"></div>
+                    <div class="people fl"></div>
+                    <div class="cl"></div>
+                </div>
+                <div class="content">
+                    <!--{if }-->
+                    <div class="pageContent">
+                        课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容
+                        课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容
+                    </div>
+                </div>
+                <div class="footBox">
+                    <span class="platform">极客学院</span>
+                    <div class="cl"></div>
+                    <img src="../img/phpImg.png">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6 item">
+            <div class="courseBox thumbnail">
+                <div class="topBox">
+                    <div class="decorateBar fl"></div>
+                    <span class="title fl">PHP入门课</span>
+                    <span class="score fr">8.8/10</span>
+                    <div class="cl"></div>
+                    <div class="people fl"></div>
+                    <div class="cl"></div>
+                </div>
+                <div class="content">
+                    <!--{if }-->
+                    <div class="pageContent">
+                        课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容
+                        课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容
+                    </div>
+                </div>
+                <div class="footBox">
+                    <span class="platform">极客学院</span>
+                    <div class="cl"></div>
+                    <img src="../img/phpImg.png">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6 item">
+            <div class="courseBox thumbnail">
+                <div class="topBox">
+                    <div class="decorateBar fl"></div>
+                    <span class="title fl">PHP入门课</span>
+                    <span class="score fr">8.8/10</span>
+                    <div class="cl"></div>
+                    <div class="people fl"></div>
+                    <div class="cl"></div>
+                </div>
+                <div class="content">
+                    <!--{if }-->
+                    <div class="pageContent">
+                        课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容
+                        课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容
+                    </div>
+                </div>
+                <div class="footBox">
+                    <span class="platform">极客学院</span>
+                    <div class="cl"></div>
+                    <img src="../img/phpImg.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer row">
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <ul>
+                <li><a href="#">联系我们</a></li>|
+                <li><a href="#">知识产权公告</a></li>|
+                <li>浙ICP备12345678</li>
+                <li><span class="copyright">版权归YCN小组所有</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script>
+    var $container = $('.masonry-container');
+    $container.imagesLoaded( function () {
+        $container.masonry({
+            columnWidth: '.item',
+            itemSelector: '.item'
+        });
+    });
+</script>
+</body>
+</html>

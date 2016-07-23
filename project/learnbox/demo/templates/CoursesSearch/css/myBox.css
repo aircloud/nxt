@@ -1,0 +1,208 @@
+.loginBox{
+    margin-top: 20px;
+}
+.resultBox{
+    margin-top: 0px;
+}
+.logo{
+    width:75px;
+}
+.searchBox{
+    margin-top: 25px;
+}
+.pageTitle{
+    display: block;
+    margin-top: 15px;
+    font-size:32px;
+    color:#4A4A4A;
+}
+.searchBox{
+    margin-top: 25px;
+}
+.searchBox{
+    margin-top: 25px;
+}
+.searchBox .search{
+    width:89%;
+    height:40px;
+    border-radius: 5px 0px 0px 5px;
+    border:0px;
+    padding-left:15px;
+    -webkit-box-shadow: 0px 2px 17px 0px rgba(0,0,0,0.09);
+    -moz-box-shadow: 0px 2px 17px 0px rgba(0,0,0,0.09);
+    box-shadow: 0px 2px 17px 0px rgba(0,0,0,0.09);
+}
+.searchBox .button{
+    border-radius: 0px 5px 5px 0px;
+    -webkit-box-shadow: 0px 2px 17px 0px rgba(0,0,0,0.09);
+    -moz-box-shadow: 0px 2px 17px 0px rgba(0,0,0,0.09);
+    box-shadow: 0px 2px 17px 0px rgba(0,0,0,0.09);
+}
+
+/*fluid box*/
+.fluidBox{
+    width:90%;
+    margin: 0px auto;
+}
+.accountBox{
+    background-color: white;
+    padding-bottom: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+    box-shadow:0px 4px 25px 0px rgba(0,0,0,0.12);
+}
+.accountBox img{
+    width:69px;
+    margin-top: 30px;
+    margin-left: 16px;
+}
+.accountBox .infoBox{
+    margin-top: 20px;
+    margin-left: 20px;
+    width:63%;
+}
+.accountBox .infoBox .name{
+    font-size: 24px;
+}
+.accountBox .nameBox img{
+    width:13px;
+    height:13px;
+    margin-left: 12px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.accountBox .infoBox .email{
+    color:#9CA3B4;
+    font-size: 10px;
+}
+.accountBox .infoBox a{
+    color:#9CA3B4;
+    font-size: 12px;
+}
+.accountBox .infoBox .setting{
+    margin-right: 20px;
+}
+.accountBox .footBox{
+    width:90%;
+    margin:0px auto;
+}
+.accountBox .footBox .collection{
+    margin-left: 12%;
+}
+.accountBox .footBox .focusMe{
+    margin-left: 25%;
+}
+.accountBox .footBox .focusMe .focus{
+    margin-left: -10px;
+}
+.accountBox .footBox .focusOther{
+    margin-left: 20%;
+}
+.accountBox .footBox .focusOther .focus{
+    margin-left: -10px;
+}
+.accountBox .footBox .number{
+    font-size: 32px;
+}
+.accountBox .footBox .collect,.accountBox .footBox .focus{
+    color:#9CA3B4;
+    font-size: 12px;
+}
+.accountBox:hover .footBox .focus,.accountBox:hover .footBox .focusMe,.accountBox:hover .footBox .focusOther
+,.accountBox:hover .infoBox a{
+    color:#289FFF;
+}
+
+.HiBox{
+    padding-bottom: 30px;
+    background-color: white;
+    padding-top: 37px;
+    border-radius: 8px;
+    margin-top: 30px;
+    box-shadow:0px 4px 25px 0px rgba(0,0,0,0.12);
+}
+.HiBox .topBox{
+    width:75%;
+    margin: 0px auto;
+}
+.HiBox .topBox img{
+    width:50px;
+    height:50px;
+}
+.HiBox .topBox .title{
+    display: block;
+    font-size: 32px;
+    margin-top: 2px;
+    margin-left: 13px;
+}
+.HiBox .mainBox{
+    width:75%;
+    margin: 30px auto;
+    font-size: 12px;
+    color:#9CA3B4;
+}
+
+.courseBox{
+    margin-top: 30px;
+    border-radius: 8px;
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    box-shadow:0px 4px 25px 0px rgba(0,0,0,0.12);
+    -webkit-transition: transform 0.5s;
+    -moz-transition: transform 0.5s;
+    -ms-transition: transform 0.5s;
+    -o-transition: transform 0.5s;
+    transition: transform 0.5s;
+}
+.courseBox:hover{
+    -webkit-transform: scaleX(1.07) scaleY(1.05);;
+    -moz-transform: scaleX(1.07) scaleY(1.05);;
+    -ms-transform: scaleX(1.07) scaleY(1.05);;
+    -o-transform: scaleX(1.07) scaleY(1.05);;
+    transform: scaleX(1.07) scaleY(1.05);;
+}
+.courseBox .topBox{
+    width:100%;
+    height:65px;
+}
+.courseBox .topBox .decorateBar{
+    width:3px;
+    height:65px;
+    background-color: #2789FB;
+    margin-left: -4px;
+}
+.courseBox .topBox .title{
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 28px;
+}
+.courseBox .topBox .score{
+    font-size: 16px;
+    margin-right: 24px;
+    margin-top: 15px;
+    color:#27F5A9;
+    font-weight: bold;
+}
+.courseBox .content{
+    width:100%;
+}
+.courseBox .content .pageContent{
+    width: 75%;
+    margin:10px auto;
+    font-size: 12px;
+    color:#9CA3B4;
+    text-align:left;
+}
+.courseBox .footBox{
+    width:75%;
+    margin:40px auto;
+}
+.courseBox .footBox .platform{
+    font-size: 10px;
+    color:#9CA3B4;
+}
+.courseBox .footBox img{
+    width:100%;
+}
+

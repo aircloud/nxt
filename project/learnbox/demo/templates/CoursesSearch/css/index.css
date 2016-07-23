@@ -1,0 +1,141 @@
+/* LOGO */
+.logoBox{
+    font-family: "Microsoft YaHei Light";
+    width:300px;
+    margin: 130px auto;
+    margin-bottom: 0px;
+}
+.logoBox .proName{
+    font-size: 32px;
+    color:#4A4A4A;
+    line-height:45px;
+    margin-left: 15px;
+}
+
+/* search box */
+.searchBox{
+    width:46%;
+    min-width:500px;
+    margin:20px auto;
+}
+.searchBox .search{
+    width:85%;
+    height:40px;
+    border-radius: 5px 0px 0px 5px;
+    border:0px;
+    padding-left:15px;
+}
+.searchBox .button{
+    border-radius: 0px 5px 5px 0px;
+}
+
+/* course recommend*/
+.courseRecomBox{
+    position: fixed;
+    bottom:0px;
+    width:74%;
+    min-width: 800px;
+    height:260px;
+    overflow: hidden;
+}
+
+.courseRecomBox .course{
+    border-radius: 5px 5px 0px 0px;
+    height:260px;
+    padding-top:20px;
+    margin-top: 165px;
+    -webkit-transition: transform 0.6s;
+    -moz-transition: transform 0.6s;
+    -ms-transition: transform 0.6s;
+    -o-transition: transform 0.6s;
+    transition: transform 0.6s;
+}
+.courseRecomBox .course:hover{
+    -webkit-transform: translateY(-165px);
+    -moz-transform: translateY(-165px);
+    -ms-transform: translateY(-165px);
+    -o-transform: translateY(-165px);
+    transform: translateY(-165px);
+}
+.courseRecomBox .topBox{
+    width:100%;
+    height:70px;
+}
+.courseRecomBox .decorateBar{
+    width:4px;
+    height:35px;
+    background-color: #2789FB;
+}
+.courseRecomBox .title{
+    width:80px;
+    height:25px;
+    font-size: 18px;
+    margin-top: 2px;
+    margin-left: 20px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.courseRecomBox .score{
+    width:53px;
+    height:18px;
+    margin-top: 4px;
+    color:#27F5A9;
+    font-size: 14px;
+    margin-right: 20px;
+    font-weight: bold;
+}
+.courseRecomBox .university{
+    margin-top: 11px;
+    margin-left: 23px;
+    font-size: 9px;
+    width:76px;
+    height:20px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.courseRecomBox .searchNum{
+    margin-left: 20px;
+    margin-top: 11px;
+    width:90px;
+    height:20px;
+    font-size: 9px;
+    text-overflow: ellipsis;
+}
+.courseRecomBox .content{
+    width:100%;
+    height:150px;
+    margin-top: 10px;
+}
+.courseRecomBox .pageContent{
+    width:178px;
+    height:150px;
+    margin: 0px auto;
+    font-size: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.courseRecomBox .pageItem{
+    width:170px;
+    height:150px;
+    margin: 0px auto;
+}
+.courseRecomBox .pageItem li{
+    border-bottom: 1px solid #ababab;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 10px;
+}
+.courseRecomBox .pageItem li:first-child{
+    border-top:1px solid #ababab ;
+}
+.courseRecomBox .pageItem a{
+    color:#4A4A4A;
+    display:block;
+    width:178px;
+    height:25px;
+    line-height: 25px;
+}
+.courseRecomBox .pageItem a:hover{
+    text-decoration: none;
+}

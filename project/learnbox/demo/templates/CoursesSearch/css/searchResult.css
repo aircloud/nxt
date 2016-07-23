@@ -1,0 +1,249 @@
+.loginBox{
+    margin-top: 20px;
+}
+.resultBox{
+    margin-top: 0px;
+}
+.logo{
+    width:75px;
+}
+.searchBox{
+    margin-top: 25px;
+}
+.searchBox .search{
+    width:89%;
+    height:40px;
+    border-radius: 5px 0px 0px 5px;
+    border:0px;
+    padding-left:15px;
+    -webkit-box-shadow: 0px 2px 17px 0px rgba(0,0,0,0.09);
+    -moz-box-shadow: 0px 2px 17px 0px rgba(0,0,0,0.09);
+    box-shadow: 0px 2px 17px 0px rgba(0,0,0,0.09);
+}
+.searchBox .button{
+    border-radius: 0px 5px 5px 0px;
+    -webkit-box-shadow: 0px 2px 17px 0px rgba(0,0,0,0.09);
+    -moz-box-shadow: 0px 2px 17px 0px rgba(0,0,0,0.09);
+    box-shadow: 0px 2px 17px 0px rgba(0,0,0,0.09);
+}
+
+/*result*/
+.decorateBar{
+    width:4px;
+    height:35px;
+    background-color: #2789FB;
+}
+
+.topBox{
+    width:100%;
+    height:40px;
+    line-height: 40px;
+}
+.title{
+    margin-left: 20px;
+    font-size: 18px;
+}
+.pedia{
+    height:auto;
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    -webkit-box-shadow: 0px 2px 17px 0px rgba(0,0,0,0.09);
+    -moz-box-shadow: 0px 2px 17px 0px rgba(0,0,0,0.09);
+    box-shadow: 0px 2px 17px 0px rgba(0,0,0,0.09);
+}
+.pedia .mainBox{
+    width:90%;
+    height:auto;
+    padding-top: 5px;
+    margin: 0px auto;
+}
+.pedia .mainBox .content{
+    width:570px;
+    height:auto;
+}
+.pedia .footBox{
+    width:100%;
+    margin-top: 30px;
+    margin-left: 35px;
+}
+.pedia .footBox a{
+    font-size: 12px;
+}
+.pedia .footBox img{
+    width:13px;
+    height:13px;
+}
+.pedia .footBox .hudong{
+    margin-left: 120px;
+}
+
+.download{
+    width:100%;
+    height:auto;
+    margin-top: 20px;
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    -webkit-transition: transform 0.5s;
+    -moz-transition: transform 0.5s;
+    -ms-transition: transform 0.5s;
+    -o-transition: transform 0.5s;
+    transition: transform 0.5s;
+    -webkit-box-shadow: 0px 2px 17px 0px rgba(0,0,0,0.09);
+    -moz-box-shadow: 0px 2px 17px 0px rgba(0,0,0,0.09);
+    box-shadow: 0px 2px 17px 0px rgba(0,0,0,0.09);
+}
+.download .topBox{
+    width:100%;
+    height:40px;
+    line-height: 40px;
+}
+.download .topBox .title{
+    margin-left: 20px;
+    font-size: 18px;
+}
+.download .topBox .os{
+    margin-right: 20px;
+    width:120px;
+}
+.download .mainBox{
+    width:90%;
+    margin: 10px auto;
+}
+.download .mainBox img{
+    max-width:25%;
+}
+.download .mainBox table{
+    width:50%;
+    margin-left: 19px;
+}
+.download .mainBox td{
+    font-size: 18px;
+    color:#424449;
+}
+.download .mainBox thead td{
+    font-size: 10px;
+    color:#9CA3B4;
+}
+.download .mainBox .softwareInfo{
+    width:70%;
+    margin-left: 19px;
+    margin-top: 5px;
+}
+.download .footBox{
+    width:70%;
+    /*margin-left: 27%;*/
+}
+
+.course{
+    width:100%;
+    height:auto;
+    margin-top: 20px;
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    -webkit-transition: transform 0.5s;
+    -moz-transition: transform 0.5s;
+    -ms-transition: transform 0.5s;
+    -o-transition: transform 0.5s;
+    transition: transform 0.5s;
+    -webkit-box-shadow: 0px 2px 17px 0px rgba(0,0,0,0.09);
+    -moz-box-shadow: 0px 2px 17px 0px rgba(0,0,0,0.09);
+    box-shadow: 0px 2px 17px 0px rgba(0,0,0,0.09);
+}
+.course .topBox{
+    width:100%;
+    height:40px;
+    line-height: 40px;
+}
+.course .topBox .title{
+    margin-left: 20px;
+    font-size: 18px;
+}
+.course .topBox .score{
+    color:#27F5A9;
+    margin-left: 25px;
+    font-size: 16px;
+    font-weight:bold;
+}
+.course .topBox .people{
+    font-size: 9px;
+    margin-right: 20px;
+}
+.course .mainBox{
+    width:90%;
+    height:auto;
+    margin: 10px auto;
+}
+.course .courseImg{
+    max-width: 25%;
+}
+.course .courseInfo{
+    width:70%;
+    margin-left: 20px;
+}
+.course .footBox{
+    width:70%;
+    height:60px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.course .platform{
+    font-size: 10px;
+    margin-top: 10px;
+}
+.course .footBox .addBtn{
+    margin-top: 8px;
+}
+.course .footBox .relateBtn{
+    margin-left: 8px;
+    font-size: 12px;
+}
+.course:hover{
+    -webkit-transform: scaleX(1.07) scaleY(1.05);;
+    -moz-transform: scaleX(1.07) scaleY(1.05);;
+    -ms-transform: scaleX(1.07) scaleY(1.05);;
+    -o-transform: scaleX(1.07) scaleY(1.05);;
+    transform: scaleX(1.07) scaleY(1.05);;
+}
+
+.relateResult{
+    background-color: white;
+    height:auto;
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    -webkit-box-shadow: 0px 2px 17px 0px rgba(0,0,0,0.09);
+    -moz-box-shadow: 0px 2px 17px 0px rgba(0,0,0,0.09);
+    box-shadow: 0px 2px 17px 0px rgba(0,0,0,0.09);
+}
+.relateResult .topBox{
+    width:100%;
+    height:40px;
+    line-height: 40px;
+}
+.relateResult .mainBox{
+    width: 90%;
+    margin: 20px auto;
+}
+.relateResult .mainBox li{
+    display: inline-block;
+    width:90px;
+    height:120px;
+    margin-left: 10px;
+}
+.relateResult .mainBox li:first-child{
+    margin-left: 0px;
+}
+.relateResult .mainBox img{
+    width:90px;
+    height:90px;
+}
+.relateResult .mainBox .courseName{
+    display: block;
+    height:20px;
+    font-size: 12px;
+    margin-top: 6px;
+    text-align: center;
+}
