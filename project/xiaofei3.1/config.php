@@ -1,0 +1,6 @@
+<?php
+$DBHOST="qdm162848165.my3w.com";
+$DBUSER="qdm162848165";
+$DBPWD="021598Ab";
+$DBNAME="qdm162848165_db";
+?>

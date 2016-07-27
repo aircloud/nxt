@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<input type="file" id="filein">
+<button onclick="test()">大小</button>
+
+<script>
+    function test(){
+        var temp=document.getElementById("filein").files[0].size;
+        temp=temp/1024;
+        alert(temp>1000);
+    }
+</script>
+</body>
+</html>
