@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>第一个backbone页面应用</title>
+    <script src="Js/jquery-1.8.2.min.js" type="text/javascript"></script>
+    <script src="Js/underscore-min.js" type="text/javascript"></script>
+    <script src="Js/backbone-min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            // 定义模型类
+            window.Test = Backbone.Model.extend({
+                initialize:function(){
+                  console.log("This model has been initialized");
+                  this.on('change:test',function () {
+                      console.log('changed');
+                  })
+                },
+                defaults: {
+                    content: 'this is a default value',
+                    test:'this is just a test value'
+                }
+            });
+            // 创建集合模型类  
+            window.TestList = Backbone.Collection.extend({
+                model: Test,
+                initialize:function() {
+                    this.on('change', function () {
+                        console.log('changed');
+                    })
+                }
+            });
+            // 向模型添加数据
+            var data = new TestList({
+                content: 'hello,backbones!'
+            });
+
+            data2 = new Test();
+
+            data2.set({
+                content: 'this is a default value by set2',
+                test:'this is just a test value by set2'
+            });
+
+            data2.set({
+                content: 'this is a default value by set3',
+            });
+
+            data.set({
+                content: 'this is a default value by set',
+                test:'this is just a test value by set'
+            });
+            // 创建View对象
+            window.TestView = Backbone.View.extend({
+                el: $("body"),
+                initialize: function () {
+                    $("#divTip").html(data.models[0].get("content"));
+                    console.log(data.models[0].toJSON());
+                }
+            });
+            //实例化View对象
+            window.App = new TestView;
+        });
+    </script>
+</head>
+<body>
+    <div id="divTip"></div>
+</body>
+</html>

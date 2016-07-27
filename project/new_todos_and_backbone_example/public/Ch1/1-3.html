@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>第一个backbone页面应用</title>
+    <script src="Js/jquery-1.8.2.min.js" type="text/javascript"></script>
+    <script src="Js/underscore-min.js" type="text/javascript"></script>
+    <script src="Js/backbone-min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+//            var todoview = Backbone.View.extend({
+//                tagName: 'li',
+//
+//                todoTpl:_.template('An example tamplate'),
+//
+//                events:{
+//                    'dbclick label':'edit',
+//                    'keypress .edit':'updateOnEnter',
+//                    'blur .edit':'close'
+//                },
+//
+//                render:function () {
+//                    this.$el.html(this.todoTpl(this.model.toJSON()));
+//                    this.input = this.$('.edit');
+//                    return this;
+//                },
+//
+//                edit:function(){
+//
+//                },
+//
+//                close:function(){
+//
+//                },
+//
+//                updateOnEnter:function(e){
+//
+//                }
+//            });
+//
+//            var todov = new todoview();
+//            console.log(todov.el);
+
+
+            var button1 = $('<button></button>');
+            var button2 = $('<button></button>');
+
+            var View = Backbone.View.extend({
+                events : {
+                    click :function(e){
+                        console.log(view.el===e.target);
+                        console.log(e.target);
+                    }
+                }
+            });
+
+            var view = new View({el:button1});
+
+            view.setElement(button2);
+
+            //button1.trigger('click');
+            button2.trigger('click');
+
+
+            var items = new Backbone.Collection();
+
+//            items.on('change', function(){console.log('change!',info); });
+            items.on("add", function () {
+                console.log("add");
+            });
+
+            items.add([{id:1,name:"Dog",age:3},{id:2,name:'cat',age:2}]);
+            items.add([{id:2,name:"wuhan",age:3}],{merge:true});
+            items.add([{id:3,name:"lion",age:2}]);
+            //只有有id的时候才有所谓的merge与否
+
+            var todorouter = Backbone.Router.extend({
+                routes:{
+                    'about':'showabout',
+                    'about/:id':'showthis'
+                },
+
+                showabout:function(){
+                    alert("router");
+                },
+                showthis:function(){
+                  document.write('this is another route function') ;
+                  console.log('this is another route function') ;
+                }
+            });
+
+            var myrouter = new todorouter();
+
+            Backbone.history.start();
+
+            document.write(JSON.stringify(items.toJSON()));
+
+
+
+
+
+        });
+    </script>
+</head>
+<body>
+<div id="divTip"></div>
+</body>
+</html>

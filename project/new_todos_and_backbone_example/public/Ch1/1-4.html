@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset=utf-8>
+    <title>Form Validation - Model#validate</title>
+    <script src='http://code.jquery.com/jquery.js'></script>
+    <script src='http://underscorejs.org/underscore.js'></script>
+    <script src='http://backbonejs.org/backbone.js'></script>
+    <script>
+        jQuery(function($) {
+
+//            alert('haha');
+            var User = Backbone.Model.extend({
+
+                initialize:function() {
+                  this.on('change',function(){
+                      alert('change');
+                      console.log('change');
+                  })
+                },
+
+                validate: function(attrs) {
+                    var errors = this.errors = {};
+
+                    if (!attrs.firstname) errors.firstname = 'firstname is required';
+                    if (!attrs.lastname) errors.lastname = 'lastname is required';
+                    if (!attrs.email) errors.email = 'email is required';
+
+                    if (!_.isEmpty(errors)) return errors;
+                },
+
+                haha:function(){
+                    alert('haha');
+                }
+
+            });
+
+            var Field = Backbone.View.extend({
+                events: {blur: 'validate'},
+                initialize: function() {
+                    this.name = this.$el.attr('name');
+                    this.$msg = $('[data-msg=' + this.name + ']');
+                },
+                validate: function() {
+                    this.model.set(this.name, this.$el.val(), {validate:true,haha:true});
+                    this.$msg.text(this.model.errors[this.name] || '');
+                }
+            });
+            //向model设置一个或多个hash属性(attributes)。如果任何一个属性改变了model的状态，在不传入 {silent: true} 选项参数的情况下，会触发 "change" 事件，更改特定属性的事件也会触发。
+            var user = new User;
+
+            $('input').each(function() {
+                new Field({el: this, model: user});
+            });
+
+        });
+    </script>
+</head>
+<body>
+this is a sample
+<form>
+    <label>First Name</label>
+    <input name='firstname'>
+    <span data-msg='firstname'></span>
+    <br>
+    <label>Last Name</label>
+    <input name='lastname'>
+    <span data-msg='lastname'></span>
+    <br>
+    <label>Email</label>
+    <input name='email'>
+    <span data-msg='email'></span>
+</form>
+</body>
+</html>
+
