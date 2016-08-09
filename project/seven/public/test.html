@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="test">
+    <span id="test1">123123</span>
+</div>
+
+
+<button onclick="open2()">open a new window</button>
+<script src="http://cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+<script>
+    window.onload=function() {
+//        document.write("<p>ppppp</p>");
+//        var span = document.createElement("span").;
+        var span = document.createElement("span");
+        span.appendChild(document.createTextNode("hello world"));
+        document.getElementById("test").appendChild(span);
+    };
+//    var aQuery = function(selector, context) {
+//        return  aQuery.prototype.init();
+//    };
+//    aQuery.prototype = {
+//        init: function() {
+//            this.age = 18;
+//            console.log(this);
+//            return this;
+//        },
+//        name: function() {},
+//        age: 20
+//    };
+//
+//
+//    console.log(aQuery().age);
+//$("<div>", {
+//    "class": "test",
+//    text: "Click me!",
+//    click: function(){ $(this).toggleClass("test"); }
+//}).appendTo("body");
+
+
+//    document.write(typeof (document.getElementById("test1")));
+//    console.log(typeof (document.getElementById("test1")));
+//
+//document.write((document.getElementById("test1")));
+//console.log((document.getElementById("test1")));
+
+
+//    var test = document.getElementsByTagName('body')[0];
+//    alert(test.childNodes.length);
+//    console.log(test.childNodes);
+function open2() {
+    window.open("http://node.310058.cn", "helloword", "width=375,height=620");
+}
+</script>
+</body>
+</html>

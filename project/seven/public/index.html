@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100%, initial-scale=1.0, maximum-scale=1.0">
+
+    <title>你们的恋爱超越了多少人</title>
+    <link type="text/css" rel="stylesheet" href="javascripts/js/lib/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        body{
+            background: url("images/back2.jpg");
+            /*background-position: 100%;*/
+            background-size: 100%;
+            background-position: 0 -40px;
+            max-width: 420px;
+        }
+        /*select {*/
+            /*border: 0;*/
+            /*outline: 1px solid rgb(204,204,204);*/
+        /*}*/
+        select {
+            -webkit-appearance: none;
+            -webkit-border-radius: 0;
+        }
+        #timeform .myselect1,#timeform .myselect2,#timeform .myselect3{
+            border:rgba(234,66,79,0.7);
+            /*#1ABC9C*/
+            background-color: rgba(234,66,79,0.7);
+            width: 260px;
+            height:45px;
+            color:white;
+            font-size: 15px;
+            /*margin-left: auto;*/
+            /*margin-right: auto;*/
+            margin-bottom: 5px;
+            text-align: center;
+        }
+        #timeform{
+            margin-top: 30px;
+        }
+
+
+        #timeform .myselect1{
+            -webkit-border-radius: 5px 5px 0 0;
+            border-radius: 5px 5px 0 0;
+        }
+        #timeform .myselect2{
+            border-radius: 0;
+        }
+        #timeform .myselect3{
+            -webkit-border-radius: 0 0 5px 5px;
+            border-radius: 0 0 5px 5px;
+        }
+        #pic1{
+            width: 162px;
+            margin-left: 26px;
+            margin-top: 60px;
+        }
+        #pic2{
+            width: 287px;
+            margin: auto;
+        }
+        #submit{
+            width: 133px;
+            margin: auto;
+            margin-top: 120px;
+            position: relative;
+        }
+        #my_contain {
+          display: inline-block;
+        }
+        #p1,#p1 span{
+            margin-top: 30px;
+            color:#4A90E2;
+            font-size: 13px;
+        }
+        @keyframes perani{
+            0%{
+                transform: scaleY(1);
+            }
+            25%{
+                transform: scaleY(1.1);
+            }
+            50%{
+                transform: scaleY(1);
+            }
+            75%{
+                transform: scaleY(0.9);
+            }
+            100%{
+                transform: scaleY(1);
+            }
+
+        }
+
+        @keyframes myanimation {
+            0%{
+                /*transform:scale(0.2);*/
+                transform:rotate(1deg);
+                left:0;
+                top:0;
+            }
+            10%{
+                  transform:rotate(4deg);
+                  left:20px;
+                  top:-30px;
+            }
+
+            20%{
+                transform:rotate(8deg);
+                left:50px;
+                top:-42px;
+            }
+
+            30%{
+                transform:rotate(12deg);
+                left:80px;
+                top:-50px;
+            }
+
+            40%{
+                transform:rotate(16deg);
+                left:110px;
+                top:-42px;
+            }
+            50%{
+                transform:rotate(20deg);
+                left:140px;
+                top:-30px;
+
+            }
+            60%{
+                transform:rotate(24deg);
+                left:170px;
+                top:0;
+
+            }
+            70%{
+                transform:rotate(28deg);
+                left:200px;
+                top:30px;
+
+            }
+            80%{
+                transform:rotate(32deg);
+                left:230px;
+                top:60px;
+
+            }
+            90%{
+                transform:rotate(36deg);
+                left:260px;
+                top:100px;
+                display: none;
+            }
+            100%{
+                transform:rotate(40deg);
+                left:290px;
+                top:150px;
+            }
+        }
+        .perani{
+            animation: perani 1s infinite alternate;
+            /*animation-fill-mode : forwards;*/
+            -webkit-animation: perani 1s infinite alternate;
+            /*-webkit-animation-fill-mode : forwards;*/
+        }
+        .myanimation1{
+            animation: myanimation 1.2s;
+            animation-fill-mode : forwards;
+            -webkit-animation: myanimation 1.2s;
+            -webkit-animation-fill-mode : forwards;
+        }
+        #canvas{
+            /*image.src = canvas.toDataURL("image/png");*/
+            width:335px;
+            height:416px;
+            position: fixed;
+            top:20px;
+            z-index: 1;
+            display: none;
+        }
+        #result_img{
+            width:335px;
+            height:416px;
+            position: fixed;
+            top:20px;
+            z-index: 2;
+            display: none;
+        }
+
+        .load-back{
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            z-index: 11;
+            position: fixed;
+        }
+
+        .loader{
+            position: fixed;
+            top:200px;
+            left: 43%;
+            z-index: 12;
+        }
+
+        @-webkit-keyframes loading-2{
+            0%{
+                transform: scaleY(1);
+            }
+            50%{
+                transform: scaleY(0.4);
+            }
+            100%{
+                transform: scaleY(1);
+            }
+        }
+        .loading-2 i{
+            display: inline-block;
+            width: 4px;
+            height: 35px;
+            border-radius: 2px;
+            margin:0 2px;
+            background-color: #00B7FF;
+        }
+        .loading-2 i:nth-child(1){
+            -webkit-animation:loading-2 1s ease-in 0.1s infinite;
+        }
+        .loading-2 i:nth-child(2){
+            -webkit-animation:loading-2 1s ease-in 0.2s infinite;
+        }
+        .loading-2 i:nth-child(3){
+            -webkit-animation:loading-2 1s ease-in 0.3s infinite;
+        }
+        .loading-2 i:nth-child(4){
+            -webkit-animation:loading-2 1s ease-in 0.4s infinite;
+        }
+        .loading-2 i:nth-child(5){
+            -webkit-animation:loading-2 1s ease-in 0.5s infinite;
+        }
+        #footer{
+            position: fixed;
+            bottom: 10px;
+            display: flex;
+            justify-content:center;
+            align-items:center;
+        }
+        #span3{
+            margin: auto;
+
+            width: 70px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="load-back">
+<div class="loader" id="loader">
+    <div class="loading-2">
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+    </div>
+</div>
+</div>
+
+<div style='margin:0 auto;width:0px;height:0px;overflow:hidden;'>
+    <img src="images/back3.jpg" style="width:500px;">
+</div>
+<div id="my_contain">
+<img src="images/pic1.png" id="pic1">
+<img src="images/pic2.png" id="pic2">
+
+<form id="timeform">
+    <select class="myselect1 form-control select select-primary"  data-toggle="select" name="year" id="year" title="年">
+        <option>2016</option>
+        <option>2015</option>
+        <option>2014</option>
+        <option>2013</option>
+        <option>2012</option>
+        <option>2011</option>
+        <option>2010</option>
+        <option>2009</option>
+        <option>2008</option>
+        <option>2007</option>
+        <option>2006</option>
+        <option>2005</option>
+        <option>2004</option>
+        <option>2003</option>
+        <option>2002</option>
+        <option>2001</option>
+    </select>
+    <select class="myselect2 form-control select select-primary" data-toggle="select" name="month" id="month" title="月">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+        <option>11</option>
+        <option>12</option>
+    </select>
+    <select class="myselect3 form-control select select-primary" data-toggle="select" name="day" id="day" title="日">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+        <option>11</option>
+        <option>12</option>
+        <option>13</option>
+        <option>14</option>
+        <option>15</option>
+        <option>16</option>
+        <option>17</option>
+        <option>18</option>
+        <option>19</option>
+        <option>20</option>
+        <option>21</option>
+        <option>22</option>
+        <option>23</option>
+        <option>24</option>
+        <option>25</option>
+        <option>26</option>
+        <option>27</option>
+        <option>28</option>
+        <option>29</option>
+        <option>30</option>
+        <option>31</option>
+    </select>
+</form>
+<!--<button title="submit" id="submit">提交</button>-->
+<img src="images/pic3.png" id="submit" class="perani" title="submit">
+<p id="p1"><span id="span1">点击纸飞机,开始测试~</span><span id="span2" style="display: none">长按图片,可以保存~~</span>
+<br/></p>
+</div>
+<p id="footer"><div id="span3" style="color: #dddddd">计算方式</div></p>
+
+<img id="result_img" alt="result" />
+<canvas id="canvas" width="670" height="832"></canvas>
+<img  id="input_png" src="images/inputpic.png" style="display:none;" >
+<script src="javascripts/js/lib/jquery/dist/jquery.min.js"></script>
+<script src="javascripts/js/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="javascripts/js/lib/underscore/underscore-min.js"></script>
+<script src="javascripts/js/lib/backbone/backbone-min.js"></script>
+<script src="javascripts/js/lib/CanvasText-0.4.1.js"></script>
+<script src="javascripts/index.js"></script>
+
+
+
+
+</body>
+</html>
