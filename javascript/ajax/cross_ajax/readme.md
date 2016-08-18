@@ -42,8 +42,22 @@ function callback(data) {
 </script>
 <script src="http://b.test.com/testjsonp"></script>
 
-在另一个域的我们引用
+在另一个域的我们这样写:
+ res.setHeader('Content-Type','application/javascript');
+ res.send('callback('+JSON.stringfy({a:1,b:2})+')');
 
-(未完待续)
+相当于返回一个函数调用，直接调用了一个callback的函数，参数就是自己要返回的对象。
+
+这样的方法就是自己事先准备一个callback函数,在jsonp2.html中自己有一个样例。
 
 
+而在实际中还有一个方法： xhr level2 中有跨域的支持 CORS即为原生跨域ajax请求。
+
+这种方法就是要设置头信息，而且只改后端代码就可以了，前端代码不用改。
+
+后端代码样例：
+
+ res.setHeader('Access-Control-Allow-Origin', 'c.test.com');
+ res.setHeader('Access-Control-Allow-Origin', '*');
+ res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE');
+ res.setHeader('Access-Control-Allow-Headers', 'test,other');
