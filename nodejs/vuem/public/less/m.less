@@ -1,0 +1,71 @@
+@import "color";
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.menu {
+  position: fixed;
+  left: 20px;
+  top: 53px;
+  width: 28px;
+  height: 24px;
+  z-index: 10;
+}
+#fix_menu{
+  width: 100%;
+  height: 54px;
+  background-color: white;
+  opacity: 0;
+  position: fixed;
+  z-index: 5;
+  top:0;
+}
+
+.header{
+  width: 100%;
+  height: auto;
+  .header-div {
+    .header-title {
+      margin: auto;
+      width: 160px;
+      height: 40px;
+      border: 2px solid @theme1;
+      display: flex;
+      p {
+        width: auto;
+        height: auto;
+        font-size: 20px;
+        margin: auto;
+        font-weight: 700;
+      }
+    }
+    width: 100%;
+    height: auto;
+    margin-bottom: 45px;
+    margin-top: 45px;
+    display: flex;
+  }
+}
+
+.banner{
+  width: 100%;
+  height:200px;
+  background-color: @theme1;
+}
+
+.side{
+  height: 100%;
+  width: 360px;
+  background-color: @theme1_border_grey;
+  position: fixed;
+  top:0;
+  left: -360px;
+  z-index: 15;
+}
+
+.content{
+  display: block;
+  width: 100%;
+  height: 500px;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=divice-width,initial-scale=1.2,user-scalable=no,maximum-scale=1">
+    <link rel="apple-touch-icon" href="favicon2.ico"/>
+    <title>10000H</title>
+</head>
+<body id="app"
+      @mousedown="startDrag" @touchstart="startDrag"
+      @mousemove="onDrag" @touchmove="onDrag"
+      @mouseup="stopDrag" @touchend="stopDrag" @mouseleave="stopDrag"
+>
+
+<div class="side" id="side">
+    <p>我的主页</p>
+    <p>文章列表</p>
+    <p>我的收藏</p>
+    <p>我的简介</p>
+</div>
+
+<img src="images/menu.png" id="tab_side" class="menu" v-show="menuShow" @click="showSideBar">
+<div id="fix_menu"></div>
+
+<div>
+    <div class="header">
+        <div class="header-div">
+            <div class="header-title">
+                <p>100000H</p>
+            </div>
+        </div>
+    </div>
+    <div id="page" >
+        <page-component></page-component>
+    </div>
+</div>
+
+</body>
+
+
+<script src="javascripts/bundle.js"></script>
+</html>
