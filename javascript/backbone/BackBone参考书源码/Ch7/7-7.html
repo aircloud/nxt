@@ -54,6 +54,8 @@
     router.route('search2/:key/p:page', 'search_key_page', function (key, page) {
         $divShow.html("实例化后，查询关键字为 " + key + " 记录,页码为 " + page);
     });
-    Backbone.history.start();
+    Backbone.history.start({
+        pushState:true,
+    });
 </script>
 </html>

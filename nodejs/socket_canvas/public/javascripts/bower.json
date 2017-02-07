@@ -1,0 +1,29 @@
+{
+  "name": "lib",
+  "main": "index.js",
+  "description": "libs",
+  "keywords": [
+    "backbone",
+    "and",
+    "so",
+    "on"
+  ],
+  "authors": [
+    "Xiaotao Nie"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.0",
+    "underscore": "^1.8.3",
+    "backbone": "^1.3.3",
+    "bootstrap": "^3.3.7"
+  }
+}

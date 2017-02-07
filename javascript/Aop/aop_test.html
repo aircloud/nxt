@@ -12,10 +12,15 @@
 
     function test(){
 //        alert(2);
-        setTimeout(document.write( "test me"),5000);
+        // setTimeout(document.write( "test me"),5000);
+        var z=1;
+        for(var i=0;i<1000000000;i++){
+            z=z*i;
+        }
+
     }
 
-    Function.prototype.before=function(fn){
+    Function.prototype.before=function(beforeFunc){
         var __self = this;//在这里的this指的是test函数
         console.log(__self);
 
@@ -29,17 +34,17 @@
 //            console.log(this.arguments);
 //            fn.apply(this.arguments);
             console.log(__self);
-            fn();
+            beforeFunc();
             __self.apply(__self.arguments);
         }
     };
 
-    Function.prototype.after = function(fn){
+    Function.prototype.after = function(afterFunc){
         var __self = this;
         return function(){
             __self.apply(__self.arguments);
             console.log(__self);
-            fn.apply(this.arguments);
+            afterFunc();
         };
     };
 

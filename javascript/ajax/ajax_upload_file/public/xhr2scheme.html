@@ -35,8 +35,6 @@
 
         // 创建xhr对象
         var xhr = new XMLHttpRequest();
-
-
         // 监听状态，实时响应
         // xhr 和 xhr.upload 都有progress事件，xhr.progress是下载进度，xhr.upload.progress是上传进度
         xhr.upload.onprogress = function(event) {
