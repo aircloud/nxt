@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form method="get" action="#" id="myform">
+
+    <fieldset>
+        <legend>basic information</legend>
+        <figure>
+            <label for="email">email:</label>
+            <input id="email" type="email" required/>
+        </figure>
+
+        <figure>
+            <label for="datetime">datatime:</label>
+            <input id="datetime" type="date" />
+        </figure>
+    </fieldset>
+    <fieldset>
+        <legend>more information</legend>
+        <figure>
+            <label for="age">datatime:</label>
+
+            <input type="number" id="age" step="4" min="0" max="20" />
+        </figure>
+        <figure>
+            <label for="phone">datatime:</label>
+            <input type="text" id="phone" pattern=^1.{10} />
+        </figure>
+        <figure>
+            <label for="range">range:</label>
+            <input type="range" id="range" min="10" max="100"/>
+            <output id="rangeoutput">50</output>
+        </figure>
+    </fieldset>
+    <input type="submit" value="submit">
+
+</form>
+
+<script>
+    document.getElementById("myform").onsubmit=function(e){
+        console.log("myform");
+        console.log(e.target.email)
+        return false;
+    }
+    document.getElementById("range").onchange=function(e){
+        document.getElementById("rangeoutput").value = e.target.value
+    }
+
+</script>
+
+</body>
+</html>
